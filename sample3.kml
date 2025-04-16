@@ -1,53 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Multiple Polygons Example</name>
+    <name>Styled Multi-Polygon Example</name>
 
+    <!-- Style Definitions -->
+    <Style id="redPoly">
+      <LineStyle>
+        <color>ff0000ff</color> <!-- Red border -->
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7d0000ff</color> <!-- Semi-transparent red fill -->
+      </PolyStyle>
+    </Style>
+
+    <Style id="greenPoly">
+      <LineStyle>
+        <color>ff00ff00</color> <!-- Green border -->
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7d00ff00</color> <!-- Semi-transparent green fill -->
+      </PolyStyle>
+    </Style>
+
+    <Style id="bluePoly">
+      <LineStyle>
+        <color>ffff0000</color> <!-- Blue border -->
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7dff0000</color> <!-- Semi-transparent blue fill -->
+      </PolyStyle>
+    </Style>
+
+    <!-- Polygon 1: Americas -->
     <Placemark>
-      <name>North America</name>
+      <name>Americas</name>
+      <styleUrl>#redPoly</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
-              -130,60,0
-              -60,60,0
-              -60,20,0
-              -130,20,0
-              -130,60,0
+              -170,70,0
+              -30,70,0
+              -30,-55,0
+              -170,-55,0
+              -170,70,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
     </Placemark>
 
+    <!-- Polygon 2: Europe/Asia -->
     <Placemark>
-      <name>Europe & West Asia</name>
+      <name>Eurasia</name>
+      <styleUrl>#greenPoly</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
-              0,60,0
-              60,60,0
-              60,30,0
-              0,30,0
-              0,60,0
+              10,70,0
+              160,70,0
+              160,10,0
+              10,10,0
+              10,70,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
     </Placemark>
 
+    <!-- Polygon 3: Oceania -->
     <Placemark>
-      <name>Australia</name>
+      <name>Australia & Pacific</name>
+      <styleUrl>#bluePoly</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
-              110,-10,0
-              155,-10,0
-              155,-45,0
-              110,-45,0
-              110,-10,0
+              110,0,0
+              180,0,0
+              180,-50,0
+              110,-50,0
+              110,0,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>
