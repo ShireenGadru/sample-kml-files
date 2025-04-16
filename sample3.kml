@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>World Map Polygon</name>
+    <name>Multiple Polygons Example</name>
+
     <Placemark>
-      <name>Large Area</name>
+      <name>North America</name>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
               -130,60,0
-              150,60,0
-              150,-45,0
-              -130,-45,0
+              -60,60,0
+              -60,20,0
+              -130,20,0
               -130,60,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
     </Placemark>
+
+    <Placemark>
+      <name>Europe & West Asia</name>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              0,60,0
+              60,60,0
+              60,30,0
+              0,30,0
+              0,60,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <Placemark>
+      <name>Australia</name>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              110,-10,0
+              155,-10,0
+              155,-45,0
+              110,-45,0
+              110,-10,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
   </Document>
 </kml>
